@@ -11,6 +11,7 @@ import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
+import 'package:flutter_samples/slider_button/slider_button_page.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
 
 void main() => runApp(MaterialApp(
@@ -36,7 +37,8 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: [SystemUiOverlay.bottom]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter Samples"),
@@ -132,6 +134,12 @@ class MyAppState extends State<MyApp> {
               title: "Menu Navigations",
               actionTap: () {
                 onButtonTap(MainMenuNavigations());
+              },
+            ),
+            MyMenuButton(
+              title: "Slider Button",
+              actionTap: () {
+                onButtonTap(SliderButtonPage());
               },
             ),
           ],
